@@ -44,13 +44,20 @@ function check_database() {
             . 'according to your server configuration</p>';
     }
     @include '../lib/core/build/conf/datawrapper-conf.php';
+
     $dbconn = $conf['datasources']['datawrapper']['connection'];
-    preg_match('/mysql\:host=([^;]+);dbname=(.*)/', $dbconn['dsn'], $m);
-    $link = mysql_connect($m[1], $dbconn['user'], $dbconn['password']);
+    $url=parse_url($dbconn['dsn']);
+
+    $server = $url["host"];
+    $username = $url["user"];
+    $password = $url["pass"];
+    $db = substr($url["path"],1);
+
+    $link = mysql_connect($server, $username, $password);
     if ($link === false) {
         return '<h2>Could not access database!</h2><p>'. mysql_error() . '</p>';
     }
-    $link = mysql_select_db($m[2]);
+    $link = mysql_select_db($db);
     if ($link === false) {
         return '<h2>Could not access database!</h2><p>'. mysql_error() . '</p>';
     }

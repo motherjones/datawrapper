@@ -8,14 +8,20 @@
 $conf = Propel::getConfiguration(PropelConfiguration::TYPE_ARRAY);
 
 $dbconn = $conf['datasources']['datawrapper']['connection'];
-preg_match('/mysql\:host=([^;]+);dbname=(.*)/', $dbconn['dsn'], $m);
-$dbhost = $m[1];
-$dbname = $m[2];
-$dbuser = $dbconn['user'];
-$dbpwd = $dbconn['password'];
 
-mysql_connect($dbhost, $dbuser, $dbpwd);
-mysql_select_db($dbname);
+$url = parse_url($dbconn['dsn']);
+
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"],1);
+
+mysql_connect($server, $username, $password);
+
+
+mysql_select_db($db);
+
+
 
 
 class DatabaseSessionHandler

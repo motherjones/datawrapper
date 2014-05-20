@@ -10,9 +10,18 @@ require_once "../lib/core/build/conf/datawrapper-conf.php";
 
 // connect to database
 $dbconn = $conf['datasources']['datawrapper']['connection'];
-preg_match('/mysql\:host=([^;]+);dbname=(.*)/', $dbconn['dsn'], $m);
-mysql_connect($m[1], $dbconn['user'], $dbconn['password']);
-mysql_select_db($m[2]);
+$url = parse_url($dbconn['dsn']);
+
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"],1);
+
+mysql_connect($server, $username, $password);
+
+
+mysql_select_db($db);
+
 
 $queries = array(
     'charts_published' => "SELECT count(*) FROM chart WHERE last_edit_step >= 4 AND deleted = 0",
