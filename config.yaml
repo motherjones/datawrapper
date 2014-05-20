@@ -1,0 +1,120 @@
+# Datawrapper configuration
+#
+
+domain: infinite-basin-4329.herokuapp.com/www/
+chart_domain: infinite-basin-4329.herokuapp.com/charts/
+
+## the following keys are used to hash passwords.
+##
+## auth_salt is used to hash passwords before sending via HTTP.
+## secure_auth_key is used to hash passwords again before
+## storing them in the database.
+##
+## Please change these keys on initial setup of Datawrapper.
+## If you change them later no user will be able to login
+## with their former passwords.
+# auth_salt: "MY_AUTH_SALT"
+# secure_auth_key: "MY_SECRET_AUTH_KEY"
+
+
+## show debug message?
+debug: true
+
+## some default values
+defaults:
+  show_in_gallery: true
+  theme: default
+  vis: bar-chart
+
+## thumbnail sizes [width, height]
+thumbnails:
+    s: [150, 150]
+    m: [260, 170]
+
+## email addresses
+email:
+  # users with problems will be shown the support email
+  support: bbreedlove@motherjones.com
+  # error messages will go here
+  log: bbreedlove@motherjones.com
+
+## prevent guest from creating charts
+prevent_guest_charts: false
+
+## prevent guests from creating accounts
+## (admin needs to create any accounts)
+prevent_guest_access: false
+
+## the following links are shown in the footer
+## please link to your own imprint (and not ours)
+footer_links:
+    - title:
+        en: Quick Start
+        de: Schnellstart
+      url: http://docs.datawrapper.de/%lang/quickstart
+    - title:
+        en: Tutorial
+        de: Tutorial
+      url: http://docs.datawrapper.de/%lang/tutorial
+
+## base url of shared assets hosted on CDN
+## this URL is where Datawrapper charts will access some third-party
+## libraries such as globalize.js.
+# asset_domain: assets-datawrapper.s3.amazonaws.com
+
+## to use a custom home page in your installation
+## uncomment the following setting and create a new
+## Twig template (e.g. my-home.twig) in /templates/custom/
+# custom_home: my-home
+
+
+## HTTP AUTH (optional)
+## edit and uncomment if Datawrapper is locked behind HTTP Auth
+# http_auth: username:password
+
+
+## TOP NAV MENU (optional)
+## edit and uncomment to add further links to the nav menu
+# navigation:
+#   - id: about
+#     title: About
+#     url: http://docs.datawrapper.de/%lang%/
+#     icon: info-sign
+#   - id: blog
+#     title: Blog
+#     url: http://blog.datawrapper.de
+#     icon: tag
+
+
+plugins:
+
+  # analytics-piwik:
+  #   url: piwik.datawrapper.de  # without http:// and trailing slash
+  #   idSite: 5
+
+  # publish-s3:
+  #   accesskey: YOUR_ACCESS_KEY
+  #   secretkey: YOUR_SECRET_KEY
+  #   bucket: your-bucket
+
+
+## PHANTOMJS (optional)
+## edit and uncomment to enable static image chart exporting
+# phantomjs:
+#     path: /path/to/phantomjs
+
+
+########################################################
+#                                                      #
+#  Anything below this line is for debugging/testing   #
+#  only and thus can safely be ignored.                #
+#                                                      #
+########################################################
+
+## if set to true, datawrapper will display a button for
+## simplifying creation of test cases
+# debug_export_test_cases: true
+
+## create_test_charts.php creates a test user who owns
+## the test charts, and will get the following password:
+# testuser_pwd: '1234'
