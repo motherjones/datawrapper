@@ -1,7 +1,5 @@
 {
-  {
-    "require": {
-      "mysql": "*"
-    }
+  "require": {
+    "mysql": "*"
   }
 }
