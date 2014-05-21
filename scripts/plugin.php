@@ -354,7 +354,7 @@ switch ($cmd) {
         print 'Unknown command '.$cmd."\n";
 }
 
-//health_check();
+health_check();
 
 exit();
 
