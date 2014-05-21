@@ -1,4 +1,5 @@
 <?php
+ini_set('error_reporting', 'E_ALL ^ E_DEPRECATED');
 
 /*
  * Custom save handler for Datawrapper sessions
