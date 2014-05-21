@@ -13,8 +13,8 @@ $dbconn = $conf['datasources']['datawrapper']['connection'];
 $url = parse_url($dbconn['dsn']);
 
 $server = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
+$username = $dbconn["user"];
+$password = $dbconn["password"];
 $db = substr($url["path"],1);
 
 mysql_connect($server, $username, $password);

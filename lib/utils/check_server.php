@@ -49,8 +49,8 @@ function check_database() {
     $url=parse_url($dbconn['dsn']);
 
     $server = $url["host"];
-    $username = $url["user"];
-    $password = $url["pass"];
+    $username = $dbconn["user"];
+    $password = $dbconn["password"];
     $db = substr($url["path"],1);
 
     $link = mysql_connect($server, $username, $password);

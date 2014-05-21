@@ -9,7 +9,7 @@ $conf = array (
       'adapter' => 'mysql',
       'connection' => 
       array (
-        'dsn' => 'bfc797e8be8eb2:d784b6cd@us-cdbr-east-05.cleardb.net/heroku_94cb0220ab02e5b',
+        'dsn' => 'mysql://us-cdbr-east-05.cleardb.net/heroku_94cb0220ab02e5b?reconnect=true',
         //'dsn' => 'mysql://bfc797e8be8eb2:d784b6cd@us-cdbr-east-05.cleardb.net/heroku_94cb0220ab02e5b?reconnect=true',
         'user' => 'bfc797e8be8eb2',
         'password' => 'd784b6cd',
