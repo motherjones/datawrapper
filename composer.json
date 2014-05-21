@@ -1,6 +1,5 @@
 {
   "require": {
-    "php" : "5.4.27",
     "ext-mysql": "*"
   }
 }
