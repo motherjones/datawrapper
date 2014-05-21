@@ -10,7 +10,7 @@ require_once "../lib/core/build/conf/datawrapper-conf.php";
 
 // connect to database
 $dbconn = $conf['datasources']['datawrapper']['connection'];
-$url = parse_url($dbconn['dsn']);
+$url = parse_url($dbconn['url']);
 
 $server = $url["host"];
 $username = $dbconn["user"];

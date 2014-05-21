@@ -9,7 +9,7 @@ $conf = Propel::getConfiguration(PropelConfiguration::TYPE_ARRAY);
 
 $dbconn = $conf['datasources']['datawrapper']['connection'];
 
-$url = parse_url($dbconn['dsn']);
+$url = parse_url($dbconn['url']);
 
 $server = $url["host"];
 $username = $dbconn["user"];

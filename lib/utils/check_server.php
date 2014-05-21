@@ -46,7 +46,7 @@ function check_database() {
     @include '../lib/core/build/conf/datawrapper-conf.php';
 
     $dbconn = $conf['datasources']['datawrapper']['connection'];
-    $url=parse_url($dbconn['dsn']);
+    $url=parse_url($dbconn['url']);
 
     $server = $url["host"];
     $username = $dbconn["user"];
