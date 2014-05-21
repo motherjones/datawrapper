@@ -293,7 +293,7 @@ function reload() {
 
 function health_check() {
     $plugins = PluginQuery::create()->find();
-    $core_info = json_decode(file_get_contents(ROOT_PATH . 'package.json'), true);
+    $core_info = json_decode(file_get_contents(ROOT_PATH . 'pkg.json'), true);
     $installed = array('core' => $core_info['version']);
     $dependencies = array();
     $WARN = "\033[1;31mWARNING:\033[1;33m";
