@@ -1,8 +1,8 @@
 # Datawrapper configuration
 #
 
-domain: infinite-basin-4329.herokuapp.com/www/
-chart_domain: infinite-basin-4329.herokuapp.com/charts/
+domain: infinite-basin-4329.herokuapp.com
+chart_domain: infinite-basin-4329.herokuapp.com
 
 ## the following keys are used to hash passwords.
 ##
