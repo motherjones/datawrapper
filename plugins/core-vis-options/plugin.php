@@ -1,4 +1,8 @@
 <?php
+require('vendor/autoload.php');
+
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
 
 class DatawrapperPlugin_CoreVisOptions extends DatawrapperPlugin {
 
@@ -6,10 +10,17 @@ class DatawrapperPlugin_CoreVisOptions extends DatawrapperPlugin {
         $plugin = $this;
         global $app;
 
+        // create a log channel to STDERR
+        $log = new Logger('omgphp');
+        $log->pushHandler(new StreamHandler('php://stderr', Logger::DEBUG));
+
         DatawrapperHooks::register(
             DatawrapperHooks::VIS_OPTION_CONTROLS,
             function($o, $k) use ($app, $plugin) {
                 $env = array('option' => $o, 'key' => $k);
+
+                $log->addInfo(getcwd());
+
                 $app->render('plugins/' . $plugin->getName() . '/templates/controls.twig', $env);
             }
         );
