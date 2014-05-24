@@ -10,6 +10,9 @@ class DatawrapperPlugin_CoreVisOptions extends DatawrapperPlugin {
             DatawrapperHooks::VIS_OPTION_CONTROLS,
             function($o, $k) use ($app, $plugin) {
                 $env = array('option' => $o, 'key' => $k);
+                $app->log->setEnabled(true);
+                $app->log->setLevel(\Slim\Log::DEBUG);
+                $app->log->info(getcwd());
                 $app->render('plugins/' . $plugin->getName() . '/templates/controls.twig', $env);
             }
         );
