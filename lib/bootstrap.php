@@ -65,6 +65,8 @@ if (!defined('NO_SLIM')) {
         TwigView::$twigDirectory = ROOT_PATH . 'vendor/Twig';
 
         $app = new Slim(array(
+            'log.level' => \Slim\Log::DEBUG,
+            'log.enabled' => true,
             'view' => new TwigView(),
             'templates.path' => '../templates',
             'session.handler' => null
