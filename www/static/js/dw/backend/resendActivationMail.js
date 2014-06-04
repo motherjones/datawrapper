@@ -10,9 +10,9 @@ define(function() {
         if (msgElement) {
             req.done(function(res) {
                 if (res.status == 'ok') {
-                    logMessage(res.data, msgElement);
+                    dw.backend.logMessage(res.data, msgElement);
                 } else {
-                    logError(res.message, msgElement);
+                    dw.backend.logError(res.message, msgElement);
                 }
             });
         }
