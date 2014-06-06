@@ -22,6 +22,7 @@ function get_chart_content($chart, $user, $published = false, $debug = false) {
     }
 
     $abs = $protocol . '://' . $GLOBALS['dw_config']['domain'];
+    $chart_abs = $protocol . '://' . $GLOBALS['dw_config']['chart_domain'];
 
     $debug = $GLOBALS['dw_config']['debug'] == true || $debug;
 
@@ -110,9 +111,9 @@ function get_chart_content($chart, $user, $published = false, $debug = false) {
             $base_js,
             $vis_libs_cdn,
             array(
-                '/lib/' . $the_vis_js[0],
-                '/lib/' . $the_theme_js[0],
-                '/lib/' . $the_chart_js[0]
+                $chart_abs . '/lib/' . $the_vis_js[0],
+                $chart_abs . '/lib/' . $the_theme_js[0],
+                $chart_abs . '/lib/' . $the_chart_js[0]
             )
         );
         $stylesheets = array($chart->getID().'.all.css');
