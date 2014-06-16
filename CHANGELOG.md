@@ -1,6 +1,12 @@
 CHANGELOG
 ---------
 
+### 1.7.9
+* refactored controller code base
+* refactored account templates
+* allowing access to plugin classes
+* bugfixes
+
 ### 1.7.8
 * re-structured header navbar
 * added font awesome

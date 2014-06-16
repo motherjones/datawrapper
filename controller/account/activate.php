@@ -6,28 +6,23 @@ $app->get('/account/activate/:token', function ($token) use ($app) {
 
     $page = array();
     add_header_vars($page, 'about');
+    $params = '';
     if (!empty($token)) {
         $users = UserQuery::create()
           ->filterByActivateToken($token)
           ->find();
 
         if (count($users) != 1) {
-            $page['alert'] = array(
-                'type' => 'error',
-                'message' => __('This activation token is invalid. Your email address is probably already activated.')
-            );
+            $params = '?t=e&m='.urlencode(__('This activation token is invalid. Your email address is probably already activated.'));
         } else {
             $user = $users[0];
             $user->setRole('editor');
-            $page['alert'] = array(
-                'type' => 'success',
-                'message' => sprintf(__('Your email address %s has been successfully activated!'), $user->getEmail())
-            );
             $user->setActivateToken('');
             $user->save();
+            $params = '?t=s&m='.urlencode(sprintf(__('Your email address %s has been successfully activated!'), $user->getEmail()));
         }
     }
-    $app->render('home.twig', $page);
+    $app->redirect('/'.$params);
 });
 
 

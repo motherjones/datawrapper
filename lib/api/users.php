@@ -87,6 +87,8 @@ $app->post('/users', function() use ($app) {
     $user->save();
     $result = $user->toArray();
 
+    DatawrapperHooks::execute(DatawrapperHooks::USER_SIGNUP, $user);
+
     // send an email
     $name     = $data->email;
     $domain   = $GLOBALS['dw_config']['domain'];
@@ -162,9 +164,9 @@ $app->put('/users/:id', function($user_id) use ($app) {
                 }
             }
 
-            if (!empty($payload->email)) {
+            if (!empty($payload->email) && $payload->email != $user->getEmail()) {
                 if (check_email($payload->email) || $curUser->isAdmin()) {
-                    if (!email_exists($payload->email) || $payload->email == $user->getEmail()) {
+                    if (!email_exists($payload->email)) {
                         if ($curUser->isAdmin()) {
                             $user->setEmail($payload->email);
                         } else {
