@@ -1,0 +1,3 @@
+[submodule "publish-s3"]
+	path = plugins/publish-s3
+	url = git@github.com:motherjones/plugin-publish-s3.git
