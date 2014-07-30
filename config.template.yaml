@@ -66,7 +66,7 @@ footer_links:
 ## to use a custom home page in your installation
 ## uncomment the following setting and create a new
 ## Twig template (e.g. my-home.twig) in /templates/custom/
-# custom_home: my-home
+custom_home: mojo
 
 
 ## HTTP AUTH (optional)
