@@ -1,5 +1,8 @@
 # MoJo Datawrapper
 
+## Getting Started
+
+Go to the web app [here](http://datawrapper.motherjones.com/) and create a new account. You'll have to wait for an admin to verify your account, and then you can start making charts.
 
 
 
