@@ -1,6 +1,6 @@
 # MoJo Datawrapper
 
-Datawrapper is a great app for making charts and tables that look good and don't require programming skills. This is Mother Jones's fork of the original.
+Datawrapper is a great app for making charts and tables that look good and don't require programming skills. This is Mother Jones's fork of the original. Forked by [@soycamo](https://twitter.com/soycamo), [@tasneemraja](https://twitter.com/tasneemraja), and [@jaeahjlee](https://twitter.com/jaeahjlee).
 
 # More on Datawrapper
 
@@ -15,6 +15,7 @@ It was created by [Mirko Lorenz](http://www.mirkolorenz.com/), [Nicolas Kayser-B
 
 ## Contact
 
+* Mother Jones: [@tasneemraja](https://twitter.com/tasneemraja)
 * IRC: #datawrapper on [freenode.net](https://webchat.freenode.net/)
 * Twitter: [@datawrapper](http://twitter.com/datawrapper)
 * Blog: [blog.datawrapper.de](http://blog.datawrapper.de)
