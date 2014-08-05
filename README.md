@@ -1,10 +1,6 @@
 # MoJo Datawrapper
 
-## Getting Started
-
-Go to the web app [here](http://datawrapper.motherjones.com/) and create a new account. You'll have to wait for an admin to verify your account, and then you can start making charts.
-
-
+Datawrapper is a great app for making charts and tables that look good and don't require programming skills. This is Mother Jones's fork of the original.
 
 # More on Datawrapper
 
