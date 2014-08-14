@@ -1,14 +1,8 @@
 # MoJo Datawrapper
 
-## Getting Started
-
-Go to the web app [here](http://datawrapper.motherjones.com/) and create a new account. You'll have to wait for an admin to verify your account, and then you can start making charts.
-
-
+Datawrapper is a great app for making charts and tables that look good and don't require programming skills. This is Mother Jones's fork of the original. Forked by [@soycamo](https://twitter.com/soycamo), [@tasneemraja](https://twitter.com/tasneemraja), and [@jaeahjlee](https://twitter.com/jaeahjlee).
 
 # More on Datawrapper
-
-Datawrapper is a tool that enables anyone to create enticing visualizations in seconds, without any programming skills. 
 
 It draws inspiration from [ManyEyes](http://www-958.ibm.com/software/data/cognos/manyeyes/) and [GoogleCharts](https://developers.google.com/chart/) but remains entirely open-source and independent from a third-party server.
 
@@ -17,8 +11,13 @@ It was created by [Mirko Lorenz](http://www.mirkolorenz.com/), [Nicolas Kayser-B
 * Live service: <http://datawrapper.de/>
 * Documentation: <http://docs.datawrapper.de/> ([Install](http://docs.datawrapper.de/en/install/))
 
+## Other known forks
+
+* [Washington Post](https://github.com/washingtonpost/datawrapper)
+
 ## Contact
 
+* Mother Jones: [@tasneemraja](https://twitter.com/tasneemraja)
 * IRC: #datawrapper on [freenode.net](https://webchat.freenode.net/)
 * Twitter: [@datawrapper](http://twitter.com/datawrapper)
 * Blog: [blog.datawrapper.de](http://blog.datawrapper.de)
