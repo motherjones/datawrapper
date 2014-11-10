@@ -1,0 +1,9 @@
+{
+    "name": "visualization-custom-line-chart",
+    "version": "0.0.1",
+    "author": "Mother Jones",
+    "dependencies": {
+        "core": "1.5.0",
+        "visualization-raphael-chart": "*"
+    }
+}
