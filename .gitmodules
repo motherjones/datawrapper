@@ -1,6 +1,0 @@
-[submodule "publish-s3"]
-	path = plugins/publish-s3
-	url = https://github.com/motherjones/plugin-publish-s3.git 
-[submodule "plugins/theme-mojo"]
-	path = plugins/theme-mojo
-	url = https://github.com/motherjones/datawrapper-theme-mojo.git
